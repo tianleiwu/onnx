@@ -70,3 +70,7 @@ onnx.egg-info
 
 # generated files
 onnx/version.py
+third_party/pybind11
+.gitignore
+.cache/v/cache/lastfailed
+.coverage
