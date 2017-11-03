@@ -3,11 +3,12 @@
 message SpecId {
     string domain = 1;
     int64 version = 2;  // Represents the max version # of any operator used in referenced library
+                        // (marcelolr) if a new op ver that isn't latest bumps, then the spec version wouldn't change?
 }
 
 message ModelProto
 {
-// identify referenced specification
+    // identify referenced specification
     repeated SpecId import = 1;
 
     // actually in GraphProto
@@ -36,7 +37,7 @@ message SpecProto
 
 message OperatorSpecProto
 {
-    string name = 1;
+    string name = 1;    // (marcelolr): clarify it's not domain-qualified, right?
     int64 version = 2;  // name/version form an identifer to an immutable specification 
 
     // TODO: add signature specification after v0.3 release
