@@ -12,7 +12,7 @@ std::function<void(OpSchema&)> ReduceDocGenerator(const char* name) {
     return [=](OpSchema& schema) {
         std::string doc = R"DOC(
 Computes the {name} of the input tensor's element along the provided axes. The resulted
-tensor has the same rank as the input if keepdims equal 1. If keepdims equal 0, then 
+tensor has the same rank as the input if keepdims equal 1. If keepdims equal 0, then
 the resulted tensor have the reduced dimension pruned.
 
 The above behavior is similar to numpy, with the exception that numpy default keepdims to
@@ -68,7 +68,7 @@ std::function<void(OpSchema&)> ArgReduceDocGenerator(const char* name) {
     return [=](OpSchema& schema) {
         std::string doc = R"DOC(
 Computes the indices of the {name} elements of the input tensor's element along the 
-provided axis. The resulted tensor has the same rank as the input if keepdims equal 1. 
+provided axis. The resulted tensor has the same rank as the input if keepdims equal 1.
 If keepdims equal 0, then the resulted tensor have the reduced dimension pruned. 
 The type of the output tensor is integer.)DOC";
         ReplaceAll(doc, "{name}", name);
