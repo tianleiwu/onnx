@@ -65,7 +65,7 @@ Equations:
   - Ht = Activation(Wi*Xt + Ri*Ht-1 + Wbi + Rbi)
 )DOC")
     .Attr("activation", "One (or two if bidirectional) activation function for "
-          "input gate. It must be one of tanh and ReLU. Default `tanh`.",
+          "input gate. It must be one of tanh, sigmoid, and relu. Default `tanh`.",
           AttrType::STRING)
     .Input(1, "W",
 	   "The weight tensor for input gate. Concatenation of `Wi` and `WBi` "
